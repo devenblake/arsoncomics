@@ -8,6 +8,31 @@
 <META CONTENT="noindex" NAME="googlebot" /> <!-- FUCK GOOGLE -->
 <META CONTENT="interest-cohort=()" HTTP-EQUIV="Permissions-Policy" /> <!-- FUCK GOOGLE -->
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1" />
+<SCRIPT TYPE="application/javascript">
+window.hop_button_stuff = function(){
+	var hop_box_value;
+	var hop_destination;
+	var i;
+	if((hop_box_value = parseInt(document.getElementById("hop_box").value)) == NaN)
+		/* not valid value */
+		document.getElementById("hop_feedback").innerHTML =
+			"'" + document.getElementById("hop_box").value + "'"
+			+ "is not a valid number."
+		;
+	else if(hop_box_value > 9999 || hop_box_value < 1)
+		/* too high */
+		document.getElementById("hop_feedback").innerHTML =
+			"There are no arson comics succeeding 9999 or preceding 1."
+		;
+	else{
+		hop_destination = '#';
+		hop_box_value = hop_box_value.toString();
+		for(i = 4 - hop_box_value.length; i > 0; --i)
+			hop_destination += '0';
+		window.location.href = hop_destination;
+	}
+};
+</SCRIPT>
 <STYLE>
 img {
 	border: 1px solid black;
@@ -18,10 +43,24 @@ img {
 </HEAD>
 <BODY>
 <H1>arson comics</H1>
+<P><SMALL>trinity 2021; public domain</SMALL></P>
+
+<INPUT ID="hop_box" VALUE="0001">
+<INPUT ID="hop_button" ONCLICK="window.hop_button_stuff();" TYPE="button" VALUE="go" />
+<P><SMALL ID="hop_feedback"></SMALL></P>
+
 <HR ALIGN="left" SIZE="1" WIDTH="25%" />
-<IMG ID="0001" SRC="/img/0001.png" /> <BR />
-<IMG ID="0002" SRC="/img/0002.png" /> <BR />
-<IMG ID="0003" SRC="/img/0003.png" /> <BR />
-<IMG ID="0004" SRC="/img/0004.png" /> <BR />
+
+<H2 ID="0001">0001</H2>
+<IMG SRC="/img/0001.png" />
+
+<H2 ID="0002">0002</H2>
+<IMG SRC="/img/0002.png" />
+
+<H2 ID="0003">0003</H2>
+<IMG SRC="/img/0003.png" />
+
+<H2 ID="0004">0004</H2>
+<IMG SRC="/img/0004.png" />
 </BODY>
 </HTML>
