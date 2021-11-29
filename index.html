@@ -13,7 +13,7 @@ window.hop_button_stuff = function(){
 	var hop_box_value;
 	var hop_destination;
 	var i;
-	if((hop_box_value = parseInt(document.getElementById("hop_box").value)) == NaN)
+	if(isNaN(hop_box_value = parseInt(document.getElementById("hop_box").value)))
 		/* not valid value */
 		document.getElementById("hop_feedback").innerHTML =
 			"'" + document.getElementById("hop_box").value + "'"
