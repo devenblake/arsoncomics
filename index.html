@@ -34,42 +34,59 @@ window.hop_button_stuff = function(){
 };
 </SCRIPT>
 <STYLE>
-img {
+img{
 	border: 1px solid black;
 	display: block;
 }
+table{	border-collapse: collapse; }
+table, td{	border: 1px solid black; }
 </STYLE>
 <TITLE>arson comics</TITLE>
 </HEAD>
 <BODY>
 <H1>arson comics</H1>
 <P><SMALL>trinity 2021; public domain</SMALL></P>
-
-<INPUT ID="hop_box" VALUE="0001">
-<INPUT ID="hop_button" ONCLICK="window.hop_button_stuff();" TYPE="button" VALUE="go" />
+<P>
+	website
+	- <A HREF="https://github.com/devenblake/arsoncomics">website git repository</A>
+	- <A HREF="https://archive.org/details/arsoncomics">original .KRA files</A>
+</P>
+<P>
+	quick navigation: 
+	<INPUT ID="hop_button" ONCLICK="window.hop_button_stuff();" TYPE="button" VALUE="go to" />
+	<INPUT ID="hop_box" VALUE="0001">
+</P>
 <P><SMALL ID="hop_feedback"></SMALL></P>
 
-<HR ALIGN="left" SIZE="1" WIDTH="25%" />
-
-<H2 ID="0001">0001</H2>
-<IMG SRC="/img/0001.png" />
-
-<H2 ID="0002">0002</H2>
-<IMG SRC="/img/0002.png" />
-
-<H2 ID="0003">0003</H2>
-<IMG SRC="/img/0003.png" />
-
-<H2 ID="0004">0004</H2>
-<IMG SRC="/img/0004.png" />
-
-<H2 ID="0005">0005</H2>
-<IMG SRC="/img/0005.png" />
-
-<H2 ID="0006">0006</H2>
-<IMG SRC="/img/0006.png" />
-
-<H2 ID="0007">0007</H2>
-<IMG SRC="/img/0007.png" />
+<TABLE>
+<TR>
+	<TD><H2 ID="0001">0001</H2></TD>
+	<TD><IMG SRC="/img/0001.png" /></TD>
+</TR>
+<TR>
+	<TD><H2 ID="0002">0002</H2></TD>
+	<TD><IMG SRC="/img/0002.png" /></TD>
+</TR>
+<TR>
+	<TD><H2 ID="0003">0003</H2></TD>
+	<TD><IMG SRC="/img/0003.png" /></TD>
+</TR>
+<TR>
+	<TD><H2 ID="0004">0004</H2></TD>
+	<TD><IMG SRC="/img/0004.png" /></TD>
+</TR>
+<TR>
+	<TD><H2 ID="0005">0005</H2></TD>
+	<TD><IMG SRC="/img/0005.png" /></TD>
+</TR>
+<TR>
+	<TD><H2 ID="0006">0006</H2></TD>
+	<TD><IMG SRC="/img/0006.png" /></TD>
+</TR>
+<TR>
+	<TD><H2 ID="0007">0007</H2></TD>
+	<TD><IMG SRC="/img/0007.png" /></TD>
+</TR>
+</TABLE>
 </BODY>
 </HTML>
