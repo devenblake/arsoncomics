@@ -29,6 +29,7 @@ window.hop_button_stuff = function(){
 		hop_box_value = hop_box_value.toString();
 		for(i = 4 - hop_box_value.length; i > 0; --i)
 			hop_destination += '0';
+		hop_destination += hop_box_value;
 		window.location.href = hop_destination;
 	}
 };
