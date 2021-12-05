@@ -7,78 +7,7 @@
 <META CONTENT="noindex" NAME="googlebot" /> <!-- FUCK GOOGLE -->
 <META CONTENT="interest-cohort=()" HTTP-EQUIV="Permissions-Policy" /> <!-- FUCK GOOGLE -->
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1" />
-<SCRIPT TYPE="application/javascript">
-/*
-@licstart The following is the entire license notice for the JavaScript
-code in this page.
-
-This is free and unencumbered software released into the public domain.
-
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
-
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-
-For more information, please refer to <http://unlicense.org/>
-
-@licend The above is the entire license notice for the JavaScript code
-in this page.
-*/
-</SCRIPT>
-<SCRIPT TYPE="application/javascript">
-window.hop_button_stuff = function(){
-	var hop_box_value;
-	if(isNaN(hop_box_value = parseInt(document.getElementById("hop_box").value)))
-		/* not valid value */
-		document.getElementById("hop_feedback").innerHTML =
-			"'" + document.getElementById("hop_box").value + "'"
-			+ " is not a valid number."
-		;
-	else if(hop_box_value > 9999 || hop_box_value < 1)
-		/* too high */
-		document.getElementById("hop_feedback").innerHTML =
-			"There are no arson comics succeeding 9999 or preceding 1."
-		;
-	else
-		window.hop_to_position(hop_box_value);
-};
-
-window.hop_to_position = function(position){
-	var i;
-	var hop_destination;
-	var str_value;
-	hop_destination = "#";
-	str_value = position.toString();
-	for(i = 4 - str_value.length; i > 0; --i)
-		hop_destination += "0";
-	hop_destination += str_value;
-	window.location.href = hop_destination;
-};
-
-window.scale_class_images = function(class_to_scale, original, scale){
-	var class_elements;
-	var i;
-	class_elements = document.getElementsByClassName(class_to_scale);
-	for(i = 0; i < class_elements.length; ++i)
-		class_elements[i].style.width = (original * scale).toString() + "px";
-};
-</SCRIPT>
+<SCRIPT SRC="/js/hop.js" TYPE="application/javascript"></SCRIPT>
 <STYLE>
 img{
 	border: 1px solid black;
@@ -106,54 +35,47 @@ table, td{	border: 1px solid black; }
 
 <TABLE>
 <TR>
-	<TD><H2 ID="0001">0001</H2></TD>
+	<TD><H2 ID="1">0001</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0001.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0002">0002</H2></TD>
+	<TD><H2 ID="2">0002</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0002.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0003">0003</H2></TD>
+	<TD><H2 ID="3">0003</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0003.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0004">0004</H2></TD>
+	<TD><H2 ID="4">0004</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0004.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0005">0005</H2></TD>
+	<TD><H2 ID="5">0005</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0005.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0006">0006</H2></TD>
+	<TD><H2 ID="6">0006</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0006.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0007">0007</H2></TD>
+	<TD><H2 ID="7">0007</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0007.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0008">0008</H2></TD>
+	<TD><H2 ID="8">0008</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0008.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0009">0009</H2></TD>
+	<TD><H2 ID="9">0009</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0009.png" /></TD>
 </TR>
 <TR>
-	<TD><H2 ID="0010">0010</H2></TD>
+	<TD><H2 ID="0">0010</H2></TD>
 	<TD><IMG CLASS="comic" SRC="/img/0010.png" /></TD>
 </TR>
-<TR>
-	<TD><H2 ID="0011">0011</H2></TD>
-	<TD><IMG CLASS="comic" SRC="/img/0011.png" /></TD>
-</TR>
-<TR>
-	<TD><H2 ID="0012">0012</H2></TD>
-	<TD><IMG CLASS="comic" SRC="/img/0012.png" /></TD>
-</TR>
 </TABLE>
+<P><A HREF="/001">0011-0020</A></P>
 <P>Thanks to WeedSmokingJew for help with image size optimization.</P>
 <P>Also check out
 <A HREF="https://www.jspowerhour.com/">Junior Scientist Power Hour</A>,
