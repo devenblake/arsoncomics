@@ -20,6 +20,7 @@ window.hop_button_stuff = function(){
 window.hop_to_position = function(position){
 	var i;
 	var current_href;
+	var hop_destination;
 	var pre_hash;
 	var post_hash;
 
@@ -37,5 +38,8 @@ window.hop_to_position = function(position){
 		/* This is much easier: */
 		current_href = current_href.substring(0, current_href.length - 1);
 
-	window.location.href = window.location.href.split('/').pop().join('/') + "/" + pre_hash + "#" + post_hash;
+	hop_destination = window.location.href.split('/');
+	hop_destination.pop();
+	hop_destination = hop_destination.join('/') + "/" + pre_hash + "#" + post_hash;
+	window.location.href = hop_destination;
 };
