@@ -46,14 +46,8 @@ window.hop_url_from_position = function(position){
 	if(current_href.charAt(current_href.length - 1) == '/')
 		current_href = current_href.substring(0, current_href.length - 1);
 
-/* 'website/000' */
 	hop_destination = current_href.split('/');
-/* 'website', '000' */
 	hop_destination.pop();
-/* 'website' */
-	return hop_destination.join('/')
-/* 'website' */
-		+ "/" + pre_hash + "#" + (position % 10).toString()
-/* 'website/000#1' */
+	return hop_destination.join('/') + "/" + pre_hash + "#" + (position % 10).toString()
 	;
 };
