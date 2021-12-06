@@ -32,11 +32,14 @@ window.hop_get_intended_value = function(){
 window.hop_url_from_position = function(position){
 	var i;
 	var current_href;
+	var current_protocol;
 	var hop_destination;
 	var pre_hash;
 	var post_hash;
 
 	current_href = window.location.href;
+	current_protocol = window.location.href.split("//")[0];
+	current_href = current_href.split("//")[1];
 
 	pre_hash = ((position - (position % 10)) / 10).toString();
 	while(pre_hash.length < window.hop_DIGITS - 1)
@@ -49,5 +52,9 @@ window.hop_url_from_position = function(position){
 	hop_destination = current_href.split('/');
 	if(hop_destination.length > 1)
 		hop_destination.pop();
-	return hop_destination.join('/') + "/" + pre_hash + "#" + (position % 10).toString();
+
+	return current_protocol + "//"
+		+ hop_destination.join('/') + "/"
+		+ pre_hash + "#" + (position % 10).toString()
+	;
 };
