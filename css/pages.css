@@ -1,0 +1,6 @@
+img{
+    border: 1px solid black;
+    display: block;
+}
+table{    border-collapse: collapse; }
+table, td{    border: 1px solid black; }
