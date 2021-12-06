@@ -47,7 +47,7 @@ window.hop_url_from_position = function(position){
 		current_href = current_href.substring(0, current_href.length - 1);
 
 	hop_destination = current_href.split('/');
-	hop_destination.pop();
-	return hop_destination.join('/') + "/" + pre_hash + "#" + (position % 10).toString()
-	;
+	if(hop_destination.length > 1)
+		hop_destination.pop();
+	return hop_destination.join('/') + "/" + pre_hash + "#" + (position % 10).toString();
 };
