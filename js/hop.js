@@ -6,7 +6,7 @@ window.hop_button_action = function(){
 	var hop_box_value;
 
 	if((hop_box_value = hop_get_intended_value()) != -1)
-		window.hop_to_position(hop_box_value);
+		window.location.href = window.hop_url_from_position(hop_box_value);
 };
 
 window.hop_get_intended_value = function(){
@@ -29,7 +29,7 @@ window.hop_get_intended_value = function(){
 	return -1;
 };
 
-window.hop_to_position = function(position){
+window.hop_url_from_position = function(position){
 	var i;
 	var current_href;
 	var hop_destination;
@@ -51,7 +51,7 @@ window.hop_to_position = function(position){
 /* 'website', '000' */
 	hop_destination.pop();
 /* 'website' */
-	window.location.href = hop_destination.join('/')
+	return hop_destination.join('/')
 /* 'website' */
 		+ "/" + pre_hash + "#" + (position % 10).toString()
 /* 'website/000#1' */
