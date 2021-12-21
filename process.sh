@@ -1,13 +1,13 @@
 #!/bin/sh
+set -ex
 
-if ! command -v convert >/dev/null 2>&1; then
-	printf "This script depends on ImageMagick.\n" 1>&2
-	exit 69 # sysexits(3) EX_UNAVAILABLE
-fi
+command -v convert >/dev/null
+command -v mogrify >/dev/null
 
-# thanks again to WeedSmokingJew
-conversion(){ convert /dev/stdin -monochrome /dev/stdout; }
+set +x
 
-for file in $(ls .)
-do conversion <"$file" >"$file".out
+for file in *; do
+	# thanks again to WeedSmokingJew
+	convert "$file" -monochrome "$file".1
+	mogrify -strip "$file".1 -write "$file".2
 done
